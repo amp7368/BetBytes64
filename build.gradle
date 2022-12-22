@@ -52,10 +52,10 @@ shadowJar {
         attributes 'Multi-Release': true
     }
     doLast {
-        if (botsBuildDir != null) {
+        if (betBytesBuildDir != null) {
             copy {
                 from getArchiveFile()
-                into file(botsBuildDir + '/ambrosia')
+                into file(betBytesBuildDir)
             }
         }
     }
